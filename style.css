@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.home section {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  position: relative;
+}
+
+.home {
+  border: 1px solid #ddd;
+  height: 100vh;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 1000;
+  height: 40px; /* Initial height */
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 20;
+  padding: 0;
+  text-align: right;
+}
+
+.navbar li {
+  display: inline;
+  margin: 0 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white; /* Text color */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.btn {
+  width: 120px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  background: #171717;
+  color: white;
+  border: 1em;
+  transition: all.4s;
+}
+
+.btn:hover {
+  border-radius: 5px;
+  transform: translateY(-10px);
+  box-shadow: 0 7px 0 -2px #ffffff, 0 15px 0 -4px #00ff6a,
+    0 16px 10px -3px #00b7ff;
+}
+/* About Us Section */
+.about-us {
+  position: relative;
+  height: 100vh; /* Half the height of the section */
+  width: 100%;
+  overflow: hidden; /* To ensure the progress effect is within the section */
+  background-color: black;
+}
+
+.about-heading {
+  position: sticky;
+  top: 0;
+  z-index: 2; /* Above the progress but below the content */
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(5, 5, 5, 0) 0%,
+    rgb(41, 91, 255) 50%,
+    rgb(31, 132, 255) 100%
+  ); /* Gradient for the progress effect */
+  background-size: 200% 100%; /* Background size for animation */
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  transition: background-position 0.3s; /* Animation transition */
+}
+
+.event {
+  position: relative;
+  height: 100vh; /* Half the height of the section */
+  width: 100%;
+  overflow: hidden; /* To ensure the progress effect is within the section */
+  background-color: rgb(255, 255, 255);
+}
+.events-heading {
+  position: sticky;
+  top: 0;
+  z-index: 2; /* Above the progress but below the content */
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(5, 5, 5, 0) 0%,
+    rgb(41, 91, 255) 50%,
+    rgb(31, 132, 255) 100%
+  ); /* Gradient for the progress effect */
+  background-size: 200% 100%; /* Background size for animation */
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  transition: background-position 0.3s; /* Animation transition */
+}
+
+.contact-us {
+  position: relative;
+  height: 100vh; /* Half the height of the section */
+  width: 100%;
+  overflow: hidden; /* To ensure the progress effect is within the section */
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+}
+.contact-heading {
+  position: sticky;
+  top: 0;
+  z-index: 2; /* Above the progress but below the content */
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(5, 5, 5, 0) 0%,
+    rgb(41, 91, 255) 50%,
+    rgb(31, 132, 255) 100%
+  ); /* Gradient for the progress effect */
+  background-size: 200% 100%; /* Background size for animation */
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  transition: background-position 0.3s; /* Animation transition */
+}
+
+.home-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("/images/dnabg.gif") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-bg h2 {
+  font-size: 15em;
+  color: #ffffff;
+  text-shadow: 0 10px 20 px rgb(255, 255, 255);
+  pointer-events: none;
+  user-select: none;
+}
+.home-bg .glass {
+  position: absolute;
+  width: 900px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* This will make sure the content is centered within the .contact-us div */
+  width: 80%; /* Adjust this value as needed to control the width of the content */
+  max-width: 600px; /* You can adjust the max-width to control the maximum width of the content */
+  margin: auto; /* This will center the content horizontally */
+}
+
+.contact-gif {
+  max-width: 200px; /* Adjust size as needed */
+}
+
+.contact-form {
+  margin: 0 20px; /* Space around the form */
+}
+
+.contact-form input[type="email"] {
+  padding: 10px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-map {
+  flex: 1;
+  border-radius: 10px;
+  padding: 20px 20px;
+}
+
+.footer-content {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.contact-info,
+.social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* This will make sure the content is centered within the .contact-us div */
+  width: 80%; /* Adjust this value as needed to control the width of the content */
+  max-width: 600px; /* You can adjust the max-width to control the maximum width of the content */
+  margin: auto; /* This will center the content horizontally */
+}
+
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  background-color: #222;
+}
+
+.footer-bottom p {
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+}
