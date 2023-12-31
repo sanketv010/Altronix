@@ -9,6 +9,8 @@ body {
   padding: 0;
 }
 
+
+
 .home section {
   width: 100%;
   height: 100%;
@@ -19,19 +21,57 @@ body {
 }
 
 .home {
-  border: 1px solid #ddd;
+  
   height: 100vh;
   width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+ 
 }
+
+.home-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("/images/dnabg.gif") no-repeat;
+  background-size: cover;
+  
+}
+
+.home-bg h2 {
+  font-size: 15em;
+  color: #ffffff;
+  text-shadow: 0 10px 20 px rgb(255, 255, 255);
+  pointer-events: none;
+  user-select: none;
+}
+.home-bg .glass {
+  position: absolute;
+  width: 900px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+
 .navbar {
-  position: fixed;
-  top: 20px;
-  left: 0;
-  width: 100%;
-  padding: 10px 0;
+  position: fixed; /* Keep the navbar fixed at the top */
+  bottom:  10; /* Position it at the top of the viewport */
+  width: 100%; 
+  padding: 20px 0;
   z-index: 1000;
-  height: 40px; /* Initial height */
+
+}
+
+.navbar-hidden {
+  transform: translateY(-100%); /* Move the navbar off-screen */
+  opacity: 0; /* Make it transparent */
+  transition: all 0.3s ease-in-out; /* Add a smooth transition */
 }
 
 .navbar ul {
@@ -71,6 +111,8 @@ body {
   box-shadow: 0 7px 0 -2px #ffffff, 0 15px 0 -4px #00ff6a,
     0 16px 10px -3px #00b7ff;
 }
+
+
 /* About Us Section */
 .about-us {
   position: relative;
@@ -103,7 +145,7 @@ body {
   height: 100vh; /* Half the height of the section */
   width: 100%;
   overflow: hidden; /* To ensure the progress effect is within the section */
-  background-color: rgb(255, 255, 255);
+  background-color: black;
 }
 .events-heading {
   position: sticky;
@@ -130,7 +172,7 @@ body {
   overflow: hidden; /* To ensure the progress effect is within the section */
   align-items: center;
   justify-content: center;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
 }
 .contact-heading {
   position: sticky;
@@ -150,35 +192,7 @@ body {
   transition: background-position 0.3s; /* Animation transition */
 }
 
-.home-bg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: url("/images/dnabg.gif") no-repeat;
-  background-size: cover;
-  background-position: center;
-}
 
-.home-bg h2 {
-  font-size: 15em;
-  color: #ffffff;
-  text-shadow: 0 10px 20 px rgb(255, 255, 255);
-  pointer-events: none;
-  user-select: none;
-}
-.home-bg .glass {
-  position: absolute;
-  width: 900px;
-  height: 400px;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
-  border-radius: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-right: 2px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-}
 .contact-content {
   display: flex;
   flex-direction: column;
@@ -215,7 +229,6 @@ body {
 .contact-form button:hover {
   background-color: #555;
 }
-
 .footer {
   background-color: #333;
   color: #fff;
@@ -261,3 +274,5 @@ body {
   padding: 10px;
   margin: 0;
 }
+
+

@@ -1,21 +1,4 @@
-document.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    const homeSection = document.getElementById('home');
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const sectionTop = homeSection.offsetTop;
-    const sectionHeight = homeSection.offsetHeight;
-
-    // Check if scroll position is within the home section
-    if (scrollTop >= sectionTop && scrollTop <= sectionTop + sectionHeight) {
-        // Display navbar with animation
-        navbar.style.opacity = '1';
-        navbar.style.height = '40px'; // Adjust height as needed
-    } else {
-        // Hide navbar with animation
-        navbar.style.opacity = '0';
-        navbar.style.height = '0';
-    }
-});
+//Progress Bar For About Us Section
 
 document.addEventListener('scroll', function() {
     const aboutSection = document.getElementById('about-us');
@@ -36,6 +19,8 @@ document.addEventListener('scroll', function() {
     }
     
 });
+
+//Progress Bar For Contact Us Section
 document.addEventListener('scroll', function() {
     const aboutSection = document.getElementById('contact-us');
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -55,6 +40,8 @@ document.addEventListener('scroll', function() {
     }
     
 });
+
+//Progress Bar For Events Section
 document.addEventListener('scroll', function() {
     const aboutSection = document.getElementById('event');
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -74,3 +61,18 @@ document.addEventListener('scroll', function() {
     }
     
 });
+
+
+//Scrolling Effect For Navbar
+window.addEventListener('scroll', function() {
+    // Get the navbar element
+    const navbar = document.querySelector('.navbar');
+  
+    // Check scroll position
+    if (window.scrollY > 0) {
+      navbar.classList.add('navbar-hidden');
+    } else {
+      navbar.classList.remove('navbar-hidden');
+    }
+  });
+  
