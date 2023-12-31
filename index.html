@@ -41,7 +41,6 @@
       </div>
 
       <div class="event" id="event">
-        
         <h1 class="events-heading">Events</h1>
       </div>
 
@@ -49,21 +48,33 @@
         <h1 class="contact-heading">Contact Us</h1>
         <div class="div-contact-us" id="particles-js">
           <div class="contact-content">
-            <img src="path_to_left_gif.gif" alt="Left Gif" class="contact-gif left-gif">
-            
-            <form action="#" method="post" class="contact-form">
-                <input type="email" name="email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-    
-            <img src="path_to_right_gif.gif" alt="Right Gif" class="contact-gif right-gif">
-        </div>
-        </div>
-        </div>
+            <img
+              src="path_to_left_gif.gif"
+              alt="Left Gif"
+              class="contact-gif left-gif"
+            />
 
+            <form action="#" method="post" class="contact-form">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+              <button type="submit">Subscribe</button>
+            </form>
+
+            <img
+              src="path_to_right_gif.gif"
+              alt="Right Gif"
+              class="contact-gif right-gif"
+            />
+          </div>
+        </div>
       </div>
-    
-    <div class="footer">  
+    </div>
+
+    <div class="footer">
       <div class="footer-map">
         <!-- You can embed your map here using services like Google Maps -->
         <iframe
@@ -80,7 +91,11 @@
       <div class="footer-content">
         <div class="contact-info">
           <h3>Contact Us</h3>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, quas! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis, enim!</p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor,
+            quas! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Facilis, enim!
+          </p>
           <p>Email:</p>
         </div>
         <div class="social-media">
@@ -100,8 +115,8 @@
 <script>
   particlesJS("particles-js", {
     particles: {
-      number: { value: 125, density: { enable: true, value_area: 900 } },
-      color: { value: "#000000" },
+      number: { value: 100, density: { enable: true, value_area: 600 } },
+      color: { value: "#ffffff" },
       shape: {
         type: "circle",
         stroke: { width: 0, color: "#000000" },
@@ -114,21 +129,21 @@
         anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
       },
       size: {
-        value: 5,
+        value: 3,
         random: true,
         anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
       },
       line_linked: {
-        enable: true, 
+        enable: true,
         distance: 150,
-        color: "#000000",
+        color: "#ffffff",
         opacity: 0.4,
         width: 1,
       },
       move: {
         enable: true,
-        speed: 6,
-        direction: "none",
+        speed: 0.5,
+        direction: "bottom-right",
         random: false,
         straight: false,
         out_mode: "out",
