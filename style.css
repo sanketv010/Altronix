@@ -9,8 +9,6 @@ body {
   padding: 0;
 }
 
-
-
 .home section {
   width: 100%;
   height: 100%;
@@ -21,11 +19,8 @@ body {
 }
 
 .home {
-  
   height: 100vh;
   width: 100%;
-  
- 
 }
 
 .home-bg {
@@ -35,7 +30,6 @@ body {
   min-height: 100vh;
   background: url("/images/dnabg.gif") no-repeat;
   background-size: cover;
-  
 }
 
 .home-bg h2 {
@@ -45,6 +39,26 @@ body {
   pointer-events: none;
   user-select: none;
 }
+
+.home-bg .h2:hover {
+  content: "";
+  position: absolute;
+  left: 110%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, #000 5%, #000 100%);
+  animation: animate 5.5s linear forwards;
+}
+
+@keyframes animate {
+  0% {
+    left: 110%;
+  }
+  100% {
+    left: -20%;
+  }
+}
+
 .home-bg .glass {
   position: absolute;
   width: 950px;
@@ -58,14 +72,12 @@ body {
   backdrop-filter: blur(10px);
 }
 
-
 .navbar {
   position: fixed; /* Keep the navbar fixed at the top */
-  bottom:  10; /* Position it at the top of the viewport */
-  width: 100%; 
+  bottom: 10; /* Position it at the top of the viewport */
+  width: 100%;
   padding: 20px 0;
   z-index: 1000;
-
 }
 
 .navbar-hidden {
@@ -112,11 +124,10 @@ body {
     0 16px 10px -3px #00b7ff;
 }
 
-
 /* About Us Section */
 .about-us {
   position: relative;
-  height: 100vh; /* Half the height of the section */
+  height: 110vh; /* Half the height of the section */
   width: 100%;
   overflow: hidden; /* To ensure the progress effect is within the section */
   background-color: black;
@@ -139,6 +150,97 @@ body {
   text-align: center;
   transition: background-position 0.3s; /* Animation transition */
 }
+
+.about-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 120px 50px;
+}
+
+.about-container .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+  height: 70vh;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+.about-container .card:hover {
+  height: 80vh;
+}
+
+.about-container .card .imgBx {
+  position: relative;
+  top: 20px;
+  width: 95%;
+  height: 80%;
+  background: #171717;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.about-container .card:hover .imgBx {
+  top: -100px;
+  scale: 0.95;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.about-container .card .imgBx img {
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-container .card .about-content {
+  position: absolute;
+  top: 87%;
+  width: 100%;
+  padding: 0 100px;
+  height: 50px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.5s;
+}
+
+
+.about-container .card:hover .about-content{
+  top: 70%;
+  height: 300px;
+}
+
+.about-container .card .about-content h2 {
+  font-size: 3em;
+  color: #171717;
+  font-weight: 700;
+}
+
+.about-container .card .about-content a{
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  padding: 12px 12px;
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+
+}
+
 
 .event {
   position: relative;
@@ -165,7 +267,9 @@ body {
   transition: background-position 0.3s; /* Animation transition */
 }
 
+
 .contact-us {
+
   position: relative;
   height: 100vh; /* Half the height of the section */
   width: 100%;
@@ -192,43 +296,107 @@ body {
   transition: background-position 0.3s; /* Animation transition */
 }
 
-
 .contact-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%; /* This will make sure the content is centered within the .contact-us div */
-  width: 80%; /* Adjust this value as needed to control the width of the content */
-  max-width: 600px; /* You can adjust the max-width to control the maximum width of the content */
-  margin: auto; /* This will center the content horizontally */
+  align-items: flex-start;
+  justify-content: flex-start;
+  
+  overflow: hidden;
 }
 
-.contact-gif {
-  max-width: 200px; /* Adjust size as needed */
+.contact-us .div-contact-us .contact-content .effect{
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  z-index: 0;
+  transform: skewY(-15deg) translateX(50px) translateY(50px);
+  animation: animateColor 2.5s linear infinite;
 }
 
-.contact-form {
-  margin: 0 20px; /* Space around the form */
+@keyframes animateColor {
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+  
+
 }
 
-.contact-form input[type="email"] {
-  padding: 10px;
+
+.contact-us .div-contact-us .contact-content .effect span {
+  
+  position: relative;
+  display: block;
   width: 200px;
-  margin-right: 10px;
+  height: 40px;
+  background: #383535;
+  transition: 0.5s;
+  z-index: var(--i);
+  animation: animate 5s ease-in-out infinite;
+  animation-delay: calc(-1s * var(--i));
 }
 
-.contact-form button {
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+@keyframes animate 
+{
+
+  0%,100%
+  {
+    transform: translateX(-70px);
+  }
+  50%
+  {
+    transform: translateX(70px);
+  }
+  
 }
 
-.contact-form button:hover {
-  background-color: #555;
+.contact-us .div-contact-us .contact-content .effect span:hover{
+  background: red;
+  transition: 0s;
 }
+
+.contact-us .div-contact-us .contact-content .effect span::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150px;  
+  height: 100%;
+  width: 150px;
+  background: #383535;
+  transform-origin: right;
+  transform: skewY(45deg);
+  transition: 0.5s;
+}
+
+.contact-us .div-contact-us .contact-content .effect span:hover::before
+{
+  background: red;
+  transition: 0s;
+}
+
+
+.contact-us .div-contact-us .contact-content .effect span::after{
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: 0px;  
+  height: 150px;
+  width: 100%;
+  background: #383535;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  transition: 0.5s;
+}
+
+.contact-us .div-contact-us .contact-content .effect span:hover::after
+{
+  background: red;
+  transition: 0s;
+}
+
+
 .footer {
   background-color: #333;
   color: #fff;
@@ -262,7 +430,6 @@ body {
   margin: auto; /* This will center the content horizontally */
 }
 
-
 .footer-bottom {
   width: 100%;
   text-align: center;
@@ -274,5 +441,3 @@ body {
   padding: 10px;
   margin: 0;
 }
-
-
