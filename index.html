@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Altronix</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
@@ -61,19 +62,34 @@
         <div class="div-contact-us" id="particles-js">
           <div class="contact-content">
 
-            <div class="effect">
-              <span style="--i:10" ></span>
-              <span style="--i:9" ></span>
-              <span style="--i:8" ></span>
-              <span style="--i:7" ></span>
-              <span style="--i:6" ></span>
-              <span style="--i:5" ></span>
-              <span style="--i:4" ></span>
-              <span style="--i:3" ></span>
-              <span style="--i:2" ></span>
-              <span style="--i:1" ></span>
-            </div>
-            
+            <div class="loginBox">
+              <h2>Get in Touch</h2>
+              <form  id="myForm" action="mailto:werulkaratharva@gmail.com" method="post" onsubmit="return validateForm()">
+                  <div class="userinputBox">
+                      <label for="username">Name</label>
+                      <input type="text" id="username" required>
+                  </div>
+      
+                  <div class="userinputBox">
+                      <label for="password">Email</label>
+                      <input type="email" id="email" required>
+                  </div>
+      
+                  <div class="userinputBox">
+                      <label for="password">Your Question?</label>
+                      <input type="text" id="Question" required>
+                  </div>
+      
+                  <button type="submit",value="Send">submit</button>
+
+                  <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+              </form>
+          </div>
+
           </div>
         </div>
       </div>

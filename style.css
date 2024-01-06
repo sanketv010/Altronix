@@ -130,7 +130,7 @@ body {
   height: 110vh; /* Half the height of the section */
   width: 100%;
   overflow: hidden; /* To ensure the progress effect is within the section */
-  background-color: black;
+  background-color: #000;
 }
 
 .about-heading {
@@ -143,7 +143,7 @@ body {
     rgba(5, 5, 5, 0) 0%,
     rgb(41, 91, 255) 50%,
     rgb(31, 132, 255) 100%
-  ); /* Gradient for the progress effect */
+  );  /* Gradient for the progress effect */
   background-size: 200% 100%; /* Background size for animation */
   color: #fff;
   padding: 10px 0;
@@ -196,7 +196,6 @@ body {
 }
 
 .about-container .card .imgBx img {
-  
   position: absolute;
   top: 0;
   left: 0;
@@ -216,8 +215,7 @@ body {
   transition: 0.5s;
 }
 
-
-.about-container .card:hover .about-content{
+.about-container .card:hover .about-content {
   top: 70%;
   height: 300px;
 }
@@ -228,7 +226,7 @@ body {
   font-weight: 700;
 }
 
-.about-container .card .about-content a{
+.about-container .card .about-content a {
   position: relative;
   top: 15px;
   display: inline-block;
@@ -238,9 +236,7 @@ body {
   font-weight: 700;
   text-decoration: none;
   border-radius: 8px;
-
 }
-
 
 .event {
   position: relative;
@@ -267,9 +263,7 @@ body {
   transition: background-position 0.3s; /* Animation transition */
 }
 
-
 .contact-us {
-
   position: relative;
   height: 100vh; /* Half the height of the section */
   width: 100%;
@@ -300,102 +294,95 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  
+
   overflow: hidden;
 }
 
-.contact-us .div-contact-us .contact-content .effect{
+.loginBox {
   position: absolute;
-  top: 30%;
-  left: 20%;
-  z-index: 0;
-  transform: skewY(-15deg) translateX(50px) translateY(50px);
-  animation: animateColor 2.5s linear infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 450px;
+  width: 400px;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Adjust the alpha value for transparency */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 25px rgba(16, 5, 10, 0.6);
+  border-radius: 10px;
+  padding: 40px;
 }
 
-@keyframes animateColor {
-  0%{
-    filter: hue-rotate(0deg);
-  }
-  100%{
-    filter: hue-rotate(360deg);
-  }
-  
-
+.loginBox h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-
-.contact-us .div-contact-us .contact-content .effect span {
-  
+.userinputBox {
   position: relative;
-  display: block;
-  width: 200px;
-  height: 40px;
-  background: #383535;
-  transition: 0.5s;
-  z-index: var(--i);
-  animation: animate 5s ease-in-out infinite;
-  animation-delay: calc(-1s * var(--i));
+  margin-bottom: 30px;
 }
 
-@keyframes animate 
-{
-
-  0%,100%
-  {
-    transform: translateX(-70px);
-  }
-  50%
-  {
-    transform: translateX(70px);
-  }
-  
-}
-
-.contact-us .div-contact-us .contact-content .effect span:hover{
-  background: red;
-  transition: 0s;
-}
-
-.contact-us .div-contact-us .contact-content .effect span::before{
-  content: "";
+.userinputBox label {
   position: absolute;
-  top: 0;
-  left: -150px;  
-  height: 100%;
-  width: 150px;
-  background: #383535;
-  transform-origin: right;
-  transform: skewY(45deg);
-  transition: 0.5s;
+  top: -20px;
+  left: 0;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 16px;
+  pointer-events: none;
 }
 
-.contact-us .div-contact-us .contact-content .effect span:hover::before
-{
-  background: red;
-  transition: 0s;
-}
-
-
-.contact-us .div-contact-us .contact-content .effect span::after{
-  content: "";
-  position: absolute;
-  top: -150px;
-  left: 0px;  
-  height: 150px;
+.userinputBox input {
   width: 100%;
-  background: #383535;
-  transform-origin: bottom;
-  transform: skewX(45deg);
+  background: transparent;
+  border: 0;
+  outline: none;
+  font-size: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+.loginBox button {
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 16px;
+  cursor: pointer;
   transition: 0.5s;
 }
 
-.contact-us .div-contact-us .contact-content .effect span:hover::after
-{
-  background: red;
-  transition: 0s;
+.loginBox button:hover {
+  color: #fff;
+  background: #2859fa;
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px; /* Adjust the margin as needed */
+}
+
+.social-icons a {
+  margin: 0px 20px; /* Adjust the margin between icons as needed */
+  color: #fff;
+  font-size: 25px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #2859fa; /* Set the color on hover */
+}
 
 .footer {
   background-color: #333;
