@@ -33,32 +33,12 @@ body {
 }
 
 .home-bg h2 {
-  font-size: 15em;
+  font-size: 15.5em;
   color: #ffffff;
   text-shadow: 0 10px 20 px rgb(255, 255, 255);
   pointer-events: none;
   user-select: none;
 }
-
-.home-bg .h2:hover {
-  content: "";
-  position: absolute;
-  left: 110%;
-  width: 120%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent 0%, #000 5%, #000 100%);
-  animation: animate 5.5s linear forwards;
-}
-
-@keyframes animate {
-  0% {
-    left: 110%;
-  }
-  100% {
-    left: -20%;
-  }
-}
-
 .home-bg .glass {
   position: absolute;
   width: 950px;
@@ -70,6 +50,82 @@ body {
   border-right: 2px solid rgba(255, 255, 255, 0.2);
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
+}
+.glass {
+  position: relative;
+  width: 80%; /* Adjust as needed */
+  margin: 50px auto; /* Centering the div */
+  padding: 20px;
+  border: 2px solid white;
+  color: white;
+  font-size: 24px;
+  overflow: hidden; /* Hide overflow to create the block effect */
+}
+
+#typewriter-text-top {
+  display: block;
+  top: 25px; /* Distance from the top */
+  font-size: 35px;
+  border-radius: 9px;
+  color: #fff; /* Text color */
+  background: rgba(0, 0, 0, 0.5);
+  /* backdrop-filter: blur(10px); */
+  /* -webkit-backdrop-filter: blur(10px); */
+  padding: 10px 20px; /* Adjust as needed */
+  margin: 10px; /* Some spacing around the text */
+  width: calc(100% -20px); /* Full width minus the margins */
+  position: absolute; /* Positioning it absolutely */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjusting for centering */
+}
+
+#typewriter-text-bottom {
+  display: block;
+  font-size: 24px;
+  border-radius: 15px;
+  color: #fff; /* Text color */
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  /* backdrop-filter: blur(10px); */
+  /* -webkit-backdrop-filter: blur(10px); */
+  padding: 10px 20px; /* Adjust as needed */
+  margin: 10px auto; /* Center the text horizontally and provide some spacing around the text */
+  position: absolute; /* Positioning it absolutely */
+  bottom: 10px; /* Distance from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjusting for centering */
+  text-align: center; /* Center-align the text */
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  width: 80%; /* Set a width to make the text take up more horizontal space */
+  max-width: 100%; /* Limit the maximum width */
+  word-wrap: break-word; /* Allow the text to wrap within the container */
+  background-size: 100% auto;
+}
+
+#block-cursor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: blinkCursor 0.5s infinite alternate;
+}
+
+@keyframes blinkCursor {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.logo {
+  display: block;
+  float: left;
+  margin-left: 50px;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
 }
 
 .navbar {
@@ -130,7 +186,7 @@ body {
   height: 110vh; /* Half the height of the section */
   width: 100%;
   overflow: hidden; /* To ensure the progress effect is within the section */
-  background-color: #000;
+  background-color: black;
 }
 
 .about-heading {
@@ -143,14 +199,13 @@ body {
     rgba(5, 5, 5, 0) 0%,
     rgb(41, 91, 255) 50%,
     rgb(31, 132, 255) 100%
-  );  /* Gradient for the progress effect */
+  ); /* Gradient for the progress effect */
   background-size: 200% 100%; /* Background size for animation */
   color: #fff;
   padding: 10px 0;
   text-align: center;
   transition: background-position 0.3s; /* Animation transition */
 }
-
 .about-container {
   position: relative;
   display: flex;
@@ -216,8 +271,11 @@ body {
 }
 
 .about-container .card:hover .about-content {
-  top: 70%;
+  top: 65%;
   height: 300px;
+  justify-content: center;
+  width: 1300px;
+  word-wrap: break-word;
 }
 
 .about-container .card .about-content h2 {
@@ -261,6 +319,98 @@ body {
   padding: 10px 0;
   text-align: center;
   transition: background-position 0.3s; /* Animation transition */
+}
+
+.e-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+  padding: 50px 0;
+  z-index: 1;
+}
+
+.e-container .e-card {
+  flex: 1 0 calc(33.33% - 60px); /* Three cards per row initially. Adjust as needed. */
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  transition: background-image 0.5s;
+}
+
+.e-container .e-card img {
+  width: 100%; /* Make sure the image takes the full width of the card */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: cover; /* Cover the entire card area */
+  position: absolute; /* Position the image */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Place the image behind other content */
+  opacity: 0.5; /* Optionally reduce the opacity for a subtle effect */
+  border-radius: 15px; /* Match the card's border-radius */
+  filter: blur(0);
+}
+.e-container .e-card:hover img {
+  filter: blur(5px); /* Adjust the value to increase or decrease blur intensity */
+}
+
+.e-container .e-card .e-content {
+  padding: 20px;
+  text-align: center;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.e-container .e-card:hover .e-content {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+
+.e-container .e-card .e-content h2 {
+  position: absolute;
+  top: -80px;
+  right: 30px;
+  font-size: 8em;
+  color: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+}
+
+.e-container .e-card .e-content h3 {
+  font-size: 1.8em;
+  color: #fff;
+  z-index: 1;
+}
+
+.e-container .e-card .e-content p {
+  font-size: 1em;
+  color: #fff;
+  font-weight: 300;
+}
+
+.e-container .e-card .e-content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  margin-top: 15px;
+  background: #fff;
+  color: #000;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .contact-us {
