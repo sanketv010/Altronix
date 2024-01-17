@@ -9,13 +9,10 @@ body {
   padding: 0;
 }
 
-.home section {
-  width: 100%;
-  height: 100%;
-}
 
 .container {
   position: relative;
+  
 }
 
 .home {
@@ -329,11 +326,12 @@ body {
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto; /* Center the container */
-  padding: 50px 0;
+  padding: 10px 0;
   z-index: 1;
 }
 
 .e-container .e-card {
+  height: 35vh;
   flex: 1 0 calc(33.33% - 60px); /* Three cards per row initially. Adjust as needed. */
   margin: 30px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -351,9 +349,9 @@ body {
 
 .e-container .e-card img {
   width: 100%; /* Make sure the image takes the full width of the card */
-  height: auto; /* Maintain the aspect ratio */
+  height: 100%; /* Maintain the aspect ratio */
   object-fit: cover; /* Cover the entire card area */
-  position: absolute; /* Position the image */
+  position: absolute; 
   top: 0;
   left: 0;
   z-index: -1; /* Place the image behind other content */
@@ -578,3 +576,19 @@ body {
   padding: 10px;
   margin: 0;
 }
+
+
+/* Common styles for all devices */
+
+/* Mobile devices */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+

@@ -133,3 +133,9 @@ function typeWriterBottom(element, quotes, speed) {
   }
   type();
 }
+
+
+function toggleNav() {
+  var nav = document.querySelector('.navbar ul');
+  nav.classList.toggle('show');
+}
